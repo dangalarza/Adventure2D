@@ -3,11 +3,11 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     public Transform attackPoint;
+    [SerializeField] private WeaponAnimator weaponAnimator;
     public float attackRadius = 0.3f;
-    public float attackCooldown = 0.4f;
-    public LayerMask enemyLayers;
-
+    [SerializeField] private float attackCooldown = 0.3f;
     private float lastAttackTime;
+    public LayerMask enemyLayers;
     private PlayerController playerController;
 
     void Awake()
@@ -17,13 +17,10 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TryAttack();
-        }
+
     }
 
-    void TryAttack()
+    public void TryAttack(Vector2 facingDirection)
     {
         if (Time.time < lastAttackTime + attackCooldown)
             return;
@@ -44,6 +41,8 @@ public class PlayerCombat : MonoBehaviour
         {
             hit.GetComponent<Enemy>()?.TakeDamage(1);
         }
+
+        weaponAnimator.PlayAttack(facingDirection);
     }
 
 #if UNITY_EDITOR

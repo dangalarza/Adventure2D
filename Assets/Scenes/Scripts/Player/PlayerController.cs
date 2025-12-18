@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            GetComponent<PlayerCombat>().TryAttack(FacingDirection);
+        }
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         movement = movement.normalized;
