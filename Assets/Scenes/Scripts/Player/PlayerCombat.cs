@@ -6,6 +6,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private WeaponAnimator weaponAnimator;
     public float attackRadius = 0.3f;
     [SerializeField] private float attackCooldown = 0.3f;
+    public int attackDamage = 1;
     private float lastAttackTime;
     public LayerMask enemyLayers;
     private PlayerController playerController;
@@ -15,13 +16,10 @@ public class PlayerCombat : MonoBehaviour
         playerController = GetComponent<PlayerController>();
     }
 
-    void Update()
-    {
-
-    }
 
     public void TryAttack(Vector2 facingDirection)
     {
+        //cooldown
         if (Time.time < lastAttackTime + attackCooldown)
             return;
 
@@ -31,30 +29,24 @@ public class PlayerCombat : MonoBehaviour
             (Vector2)transform.position +
             playerController.FacingDirection * 0.5f;
 
+        //notice array, catches all enemies in hitbox
         Collider2D[] hits = Physics2D.OverlapCircleAll(
             attackPos,
             attackRadius,
             enemyLayers
         );
 
+        //Apply damage for each enemy in hit box
         foreach (Collider2D hit in hits)
         {
-            hit.GetComponent<Enemy>()?.TakeDamage(1);
+            if (hit.TryGetComponent(out Enemy enemy))
+                {
+                    //Weapon tells enemy its location and damage
+                    enemy.TakeDamage(attackDamage, transform.position);
+                }
+
         }
 
         weaponAnimator.PlayAttack(facingDirection);
     }
-
-#if UNITY_EDITOR
-    void OnDrawGizmosSelected()
-    {
-        if (!Application.isPlaying) return;
-
-        Gizmos.color = Color.red;
-        Vector2 attackPos =
-            (Vector2)transform.position +
-            playerController.FacingDirection * 0.5f;
-        Gizmos.DrawWireSphere(attackPos, attackRadius);
-    }
-#endif
 }
