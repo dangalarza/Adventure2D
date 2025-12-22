@@ -16,6 +16,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        movement = movement.normalized;
+        if (movement != Vector2.zero)
+        {
+            FacingDirection = movement;
+        }
+
         if (Input.GetButtonDown("Fire1"))
         {
             GetComponent<PlayerCombat>().TryAttack();
@@ -24,12 +30,7 @@ public class PlayerController : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
         movement = movement.normalized;
 
-        if (movement != Vector2.zero)
-        {
-            FacingDirection = movement;
-        }
         movement = movement.normalized;
-
 
         characterAnimator.UpdateAnimation(movement);
     }

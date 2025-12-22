@@ -11,11 +11,12 @@ public class Weapon : MonoBehaviour
     private void Awake()
     {
         hitbox.enabled = false;
+        animator.runtimeAnimatorController = data.overrideController;
     }
 
     public void Attack(Vector2 facingDirection)
     {
-        transform.right = facingDirection;
+        //transform.right = facingDirection;
         hitbox.size = data.hitboxSize;
         hitbox.enabled = true;
 
@@ -25,7 +26,7 @@ public class Weapon : MonoBehaviour
         weaponAnimator.PlayAttack(facingDirection);
     }
 
-        public void Equip()
+    public void Equip()
     {
         animator.runtimeAnimatorController = data.overrideController;
     }
