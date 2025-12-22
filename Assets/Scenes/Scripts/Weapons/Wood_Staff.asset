@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Wood_Staff
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
   damage: 1
-  swingDuration: 0.15
+  swingDuration: 0.1
   hitboxSize: {x: 1.2, y: 0.8}
-  knockbackForce: 8
-  cooldown: 0.25
-  overrideController: {fileID: 0}
+  knockbackForce: 4
+  cooldown: 0.5
+  overrideController: {fileID: 22100000, guid: 8566df74d3bfbf74085bce3d64f60a2a, type: 2}

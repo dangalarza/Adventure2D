@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a0604a05255e340826553ebb0d20b5, type: 3}
   m_Name: Big_Staff
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
-  damage: 1
-  swingDuration: 0.15
-  hitboxSize: {x: 1.2, y: 0.8}
-  knockbackForce: 8
-  cooldown: 0.25
+  damage: 2
+  swingDuration: 2.2
+  hitboxSize: {x: 2.2, y: 1}
+  knockbackForce: 12
+  cooldown: 2.2
+  overrideController: {fileID: 22100000, guid: c8de0ea577e593f4097ce6115c03d3d6, type: 2}
