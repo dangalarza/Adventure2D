@@ -30,4 +30,9 @@ public class PlayerCombat : MonoBehaviour
 
         weapon.Attack(playerController.FacingDirection);
     }
+
+    public void TryEquip(WeaponData data)
+    {
+        weapon.Equip(data);
+    }
 }

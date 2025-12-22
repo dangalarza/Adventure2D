@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c894790fcfac8b9499d3075c7e50df2d
+guid: 0e4ddeaca87d31440a4c890693fbe37b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6120671361122809635
-    second: extras_0
+      213: 4290869135450551489
+    second: WeaponSizeRef_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,199 +113,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: extras_0
+      name: WeaponSizeRef_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 32
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 327b1aa9c2ef0f450800000000000000
-      internalID: 6120671361122809635
+      spriteID: 1c4b734aeba3c8b30800000000000000
+      internalID: 4290869135450551489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: extras_1
+      name: WeaponSizeRef_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d340527c305f164ca510231fb39c2b3
+      internalID: -665970321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponSizeRef_2
       rect:
         serializedVersion: 2
         x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 32
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed903c02f624f7343b40981f943d779e
-      internalID: -1268327513
+      spriteID: e8b23779aefcb884f885198cebb9973b
+      internalID: 1044791929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: extras_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95330060311bc8442ba5d14f1fcfacfc
-      internalID: -1019908531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: extras_3
+      name: WeaponSizeRef_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 16
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 180ecfb3f55acff45adf66b7a687e137
-      internalID: -160541015
+      spriteID: 6feb040eb67ca9645aed66a52eff801d
+      internalID: 931482950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: extras_4
+      name: WeaponSizeRef_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2351a2e47587daa41b2fda16186cce9e
+      internalID: 1012337897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponSizeRef_5
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 16
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81410019323910c4b93a6d667c7035ac
-      internalID: -632011085
+      spriteID: e3428368d58a6bb4db2360ae57256ba2
+      internalID: 1135602031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: extras_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 372fe4433fd32c34bab41aee340d1787
-      internalID: 975592240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: extras_6
+      name: WeaponSizeRef_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b47d5c806fc7ca438955b23a3b6fc7c
-      internalID: 1022791176
+      spriteID: 5598771da249a3f4084bc8d1d36c22de
+      internalID: 1241849614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: extras_7
+      name: WeaponSizeRef_7
       rect:
         serializedVersion: 2
-        x: 32
+        x: 16
         y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02547da071b52a249846f8a5fcd386bc
-      internalID: 589682581
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: extras_8
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d10890f42a144dd48bf0d9c793c2722c
-      internalID: 888859586
+      spriteID: b765ff14784c8484fa07969fa99b3398
+      internalID: -613259503
       vertices: []
       indices: 
       edges: []
@@ -314,7 +292,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b669b745c387b7e4d8516f0bfe1e60d2
+    spriteID: a348703537e56d24289614b2517450f0
     internalID: 0
     vertices: []
     indices: 
@@ -324,17 +302,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":1.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":1,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      extras_0: 6120671361122809635
-      extras_1: -1268327513
-      extras_2: -1019908531
-      extras_3: -160541015
-      extras_4: -632011085
-      extras_5: 975592240
-      extras_6: 1022791176
-      extras_7: 589682581
-      extras_8: 888859586
+      WeaponSizeRef_0: 4290869135450551489
+      WeaponSizeRef_1: -665970321
+      WeaponSizeRef_2: 1044791929
+      WeaponSizeRef_3: 931482950
+      WeaponSizeRef_4: 1012337897
+      WeaponSizeRef_5: 1135602031
+      WeaponSizeRef_6: 1241849614
+      WeaponSizeRef_7: -613259503
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private WeaponData staff;
+    [SerializeField] private WeaponData sword;
     public float speed = 5f;
     public Vector2 FacingDirection { get; private set; } = Vector2.down;
     private Rigidbody2D rb2d;
@@ -18,19 +20,23 @@ public class PlayerController : MonoBehaviour
     {
         movement = movement.normalized;
         if (movement != Vector2.zero)
-        {
             FacingDirection = movement;
-        }
 
         if (Input.GetButtonDown("Fire1"))
-        {
             GetComponent<PlayerCombat>().TryAttack();
-        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            GetComponent<PlayerCombat>().TryEquip(staff);
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+            GetComponent<PlayerCombat>().TryEquip(sword);
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        movement = movement.normalized;
 
         movement = movement.normalized;
+
+        //movement = movement.normalized;
 
         characterAnimator.UpdateAnimation(movement);
     }

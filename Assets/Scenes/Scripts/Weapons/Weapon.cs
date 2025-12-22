@@ -2,33 +2,34 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] private WeaponData data;
+    [SerializeField] private WeaponData weapon;
     [SerializeField] private WeaponAnimator weaponAnimator;
     [SerializeField] private Animator animator;
     [SerializeField] private BoxCollider2D hitbox;
     [SerializeField] private LayerMask enemyLayers;
+    
 
     private void Awake()
     {
         hitbox.enabled = false;
-        animator.runtimeAnimatorController = data.overrideController;
+        animator.runtimeAnimatorController = weapon.overrideController;
     }
 
     public void Attack(Vector2 facingDirection)
     {
-        //transform.right = facingDirection;
-        hitbox.size = data.hitboxSize;
+        hitbox.size = weapon.hitboxSize;
         hitbox.enabled = true;
 
-        // play animation here
-
-        Invoke(nameof(DisableHitbox), data.swingDuration);
+        // play animation
+        Invoke(nameof(DisableHitbox), weapon.swingDuration);
         weaponAnimator.PlayAttack(facingDirection);
     }
 
-    public void Equip()
+    public void Equip( WeaponData nextWeapon)
     {
-        animator.runtimeAnimatorController = data.overrideController;
+        //Set scriptObject to next, update animator.
+        weapon = nextWeapon;
+        animator.runtimeAnimatorController = nextWeapon.overrideController;
     }
 
     private void DisableHitbox()
@@ -40,7 +41,7 @@ public class Weapon : MonoBehaviour
     {
         if (!other.TryGetComponent(out Enemy enemy)) return;
 
-        enemy.TakeDamage(data.damage, transform.position);
+        enemy.TakeDamage(weapon.damage, transform.position);
     }
 }
 
