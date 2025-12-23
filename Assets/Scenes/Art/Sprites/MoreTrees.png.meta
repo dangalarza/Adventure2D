@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0e4ddeaca87d31440a4c890693fbe37b
+guid: ac05895803614a4439ae4653332eedbc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4290869135450551489
-    second: WeaponSizeRef_0
+      213: 846282350635879822
+    second: MoreTrees(3)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,177 +113,199 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WeaponSizeRef_0
+      name: MoreTrees_0
       rect:
         serializedVersion: 2
         x: 0
         y: 32
         width: 16
         height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1c4b734aeba3c8b30800000000000000
-      internalID: 4290869135450551489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WeaponSizeRef_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d340527c305f164ca510231fb39c2b3
-      internalID: -665970321
+      spriteID: 25f18023dcc20074bad53e2f33e896a3
+      internalID: 2118972003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WeaponSizeRef_2
+      name: MoreTrees_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002293aa5b739624cb75add0d029bae1
+      internalID: 464396324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoreTrees_2
       rect:
         serializedVersion: 2
         x: 32
         y: 32
         width: 16
         height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8b23779aefcb884f885198cebb9973b
-      internalID: 1044791929
+      spriteID: 609087e05cac6a8468d2747b3db1117e
+      internalID: -2127990746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WeaponSizeRef_3
+      name: MoreTrees_3
       rect:
         serializedVersion: 2
         x: 0
         y: 16
         width: 16
         height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6feb040eb67ca9645aed66a52eff801d
-      internalID: 931482950
+      spriteID: 01028adab43c0c44697b055101db50ae
+      internalID: 1322242725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WeaponSizeRef_4
+      name: MoreTrees_4
       rect:
         serializedVersion: 2
         x: 16
         y: 16
         width: 16
         height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2351a2e47587daa41b2fda16186cce9e
-      internalID: 1012337897
+      spriteID: dccb0633b492cdc4286d4f1b5c038da2
+      internalID: 1042544285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WeaponSizeRef_5
+      name: MoreTrees_5
       rect:
         serializedVersion: 2
         x: 32
         y: 16
         width: 16
         height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3428368d58a6bb4db2360ae57256ba2
-      internalID: 1135602031
+      spriteID: 63f8ac6ba7e32a74b968bb8f8cfb4b97
+      internalID: 884578027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WeaponSizeRef_6
+      name: MoreTrees_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
         height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5598771da249a3f4084bc8d1d36c22de
-      internalID: 1241849614
+      spriteID: 0ccb11b3af9df6d4482c1285db69fa01
+      internalID: -1228933309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WeaponSizeRef_7
+      name: MoreTrees_7
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
         height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b765ff14784c8484fa07969fa99b3398
-      internalID: -613259503
+      spriteID: 47ad2eab5e7bc2349ab3df0190006c0d
+      internalID: -1640273955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoreTrees_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db231d6533959ad47a20b1edde7af06e
+      internalID: 1544437932
       vertices: []
       indices: 
       edges: []
@@ -292,7 +314,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a348703537e56d24289614b2517450f0
+    spriteID: 59807f4f2f46c0d4d9474ee0523cb97e
     internalID: 0
     vertices: []
     indices: 
@@ -302,16 +324,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":1.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":1,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      WeaponSizeRef_0: 4290869135450551489
-      WeaponSizeRef_1: -665970321
-      WeaponSizeRef_2: 1044791929
-      WeaponSizeRef_3: 931482950
-      WeaponSizeRef_4: 1012337897
-      WeaponSizeRef_5: 1135602031
-      WeaponSizeRef_6: 1241849614
-      WeaponSizeRef_7: -613259503
+      MoreTrees_0: 2118972003
+      MoreTrees_1: 464396324
+      MoreTrees_2: -2127990746
+      MoreTrees_3: 1322242725
+      MoreTrees_4: 1042544285
+      MoreTrees_5: 884578027
+      MoreTrees_6: -1228933309
+      MoreTrees_7: -1640273955
+      MoreTrees_8: 1544437932
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

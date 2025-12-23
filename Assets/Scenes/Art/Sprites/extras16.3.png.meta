@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 50cb483a7872c34478784bea2057ce47
+guid: 06a2de8a8c0aa4a41800be11506de053
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6260509805392164148
-    second: MoreTrees(1)_0
-  - first:
-      213: 1139779835671772736
-    second: MoreTrees(1)_1
+      213: -1350959016585562912
+    second: extras16.3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MoreTrees(1)_0
+      name: extras16.3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +128,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 435ff379f7cc1e650800000000000000
-      internalID: 6260509805392164148
+      spriteID: 0e47e4e9eed604de0800000000000000
+      internalID: -1350959016585562912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoreTrees(1)_1
+      name: extras16.3_1
       rect:
         serializedVersion: 2
         x: 16
@@ -151,16 +148,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 04e7e53c8bf41df00800000000000000
-      internalID: 1139779835671772736
+      spriteID: 9a4d16e721d91e54e947ab30d7044a3d
+      internalID: -1271711620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoreTrees(1)_2
+      name: extras16.3_2
       rect:
         serializedVersion: 2
         x: 32
@@ -175,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad983d85be4b6724d894b3c4afae5756
-      internalID: 1565769330
+      spriteID: e46c469185290d5499900aa1b5f30efc
+      internalID: 259296728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoreTrees(1)_3
+      name: extras16.3_3
       rect:
         serializedVersion: 2
         x: 0
@@ -197,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba1961ecf005035428d32b5f46733eb4
-      internalID: -1912509986
+      spriteID: 6296caa170cf6254594e2be4918dd803
+      internalID: 1019586009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoreTrees(1)_4
+      name: extras16.3_4
       rect:
         serializedVersion: 2
         x: 16
@@ -219,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6121adfbd22f1eb45a4a0786b20298db
-      internalID: -1531719391
+      spriteID: 9b89a3e41e4fe6e498acc9ebd0b0ce52
+      internalID: -1752912876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoreTrees(1)_5
+      name: extras16.3_5
       rect:
         serializedVersion: 2
         x: 32
@@ -241,14 +238,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 143c8b73d1479714ea98e450433284ba
-      internalID: -1887891694
+      spriteID: 111ea3b2c4fb6cb44bd14528d02d1e69
+      internalID: 1163550296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoreTrees(1)_6
+      name: extras16.3_6
       rect:
         serializedVersion: 2
         x: 0
@@ -263,14 +260,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5af4b67cfa6dc84f90df5d321263d2d
-      internalID: -1187765538
+      spriteID: 3aaa43fa8c125f34788d326ec312b944
+      internalID: -2113750840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoreTrees(1)_7
+      name: extras16.3_7
       rect:
         serializedVersion: 2
         x: 16
@@ -285,8 +282,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a9b39ae5d7823545981b9079aedd47e
-      internalID: 1609732180
+      spriteID: 7a18e6190b2a0e344829b18ba6d8f9d8
+      internalID: -176058203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: extras16.3_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1699d2c54235ba84286f9a2fe47609a3
+      internalID: -1675552379
       vertices: []
       indices: 
       edges: []
@@ -295,7 +314,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ef3159f8a7a664f4586e4b3d59113fb9
+    spriteID: b7a5a963a8b32704e9cd0802c729b159
     internalID: 0
     vertices: []
     indices: 
@@ -307,14 +326,15 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      MoreTrees(1)_0: 6260509805392164148
-      MoreTrees(1)_1: 1139779835671772736
-      MoreTrees(1)_2: 1565769330
-      MoreTrees(1)_3: -1912509986
-      MoreTrees(1)_4: -1531719391
-      MoreTrees(1)_5: -1887891694
-      MoreTrees(1)_6: -1187765538
-      MoreTrees(1)_7: 1609732180
+      extras16.3_0: -1350959016585562912
+      extras16.3_1: -1271711620
+      extras16.3_2: 259296728
+      extras16.3_3: 1019586009
+      extras16.3_4: -1752912876
+      extras16.3_5: 1163550296
+      extras16.3_6: -2113750840
+      extras16.3_7: -176058203
+      extras16.3_8: -1675552379
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

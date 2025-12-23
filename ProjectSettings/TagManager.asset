@@ -44,6 +44,9 @@ TagManager:
   - name: Ground
     uniqueID: 263139901
     locked: 0
+  - name: Water
+    uniqueID: 3007681639
+    locked: 0
   - name: Walls
     uniqueID: 4156442967
     locked: 0
