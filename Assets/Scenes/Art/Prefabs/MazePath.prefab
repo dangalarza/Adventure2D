@@ -91,5 +91,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49d592b04dccf5439fab8c43257fdb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MazePath
-  pathDirection: set path direction please
+  pathDirection: 
   mazeManager: {fileID: 0}

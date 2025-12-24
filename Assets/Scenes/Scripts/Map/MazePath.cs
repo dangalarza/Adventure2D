@@ -4,27 +4,15 @@ using UnityEngine;
 
 public class MazePath : MonoBehaviour
 {
-    [SerializeField] private string pathDirection;
-    [SerializeField] MazeManager mazeManager;
+    [SerializeField] private MazeDirection pathDirection;
+    [SerializeField] private MazeManager mazeManager;
 
-    void Awake()
-    {
-        if (pathDirection != "left" && pathDirection != "right" && pathDirection != "up" && pathDirection != "down")
-        {
-            print("Invalid name: " + pathDirection);
-        }
-    }
+
 
     void OnTriggerEnter2D (Collider2D other)
     {
         //only player can enter
         if (!other.CompareTag("Player")) return;
-        mazeManager.recordPath(pathDirection);
+        mazeManager.RecordPath(pathDirection);
     }
-
-    public string getPath()
-    {
-        return pathDirection;
-    }
-
 }

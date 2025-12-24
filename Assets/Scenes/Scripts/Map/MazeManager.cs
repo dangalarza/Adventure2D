@@ -5,33 +5,47 @@ using UnityEngine;
 
 public class MazeManager : MonoBehaviour
 {
-    List<String> dirs = new List<string> { "left", "up", "right","down" };
-    List<String> pathList = new List<string>();
-    public void recordPath(string direction)
+    private List<MazeDirection> solution = new()
     {
-        pathList.Add(direction);
-        if (pathList.Count <= dirs.Count)
-        compareLists();
-        else print("Puzzle complete. Player took last exit.");
-    }
+        MazeDirection.Left,
+        MazeDirection.Up,
+        MazeDirection.Right,
+        MazeDirection.Down
+    };
 
-    public void compareLists()
+    private int progressIndex = 0;
+
+    // Called by MazeDoor
+    public void RecordPath(MazeDirection direction)
     {
-        //set 0 based index
-        int count = pathList.Count - 1;
-
-        // loop thru each list, compare, check list len equal
-        if (pathList[count].Equals(dirs[count]))
+        // Check current step
+        if (direction == solution[progressIndex])
         {
-            //Transition to next maze square
-            print("Correct");
+            progressIndex++;
+            Debug.Log("Correct");
+
+            if (progressIndex >= solution.Count)
+            {
+                PuzzleComplete();
+            }
         }
         else
         {
-            //return to first maze square
-            print("Clearing...");
-            pathList.Clear();
+            ResetMaze();
         }
+    }
 
+    private void ResetMaze()
+    {
+        Debug.Log("Clearing...");
+        progressIndex = 0;
+        // TODO: teleport player to start
+    }
+
+    private void PuzzleComplete()
+    {
+        Debug.Log("Puzzle complete!");
+        progressIndex = 0;
+        // TODO: unlock exit, transition, reward player
     }
 }
