@@ -4,6 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private WeaponData staff;
     [SerializeField] private WeaponData sword;
+    private static PlayerController instance;
     public float speed = 5f;
     public Vector2 FacingDirection { get; private set; } = Vector2.down;
     private Rigidbody2D rb2d;
@@ -12,6 +13,14 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
         rb2d = GetComponent<Rigidbody2D>();
         characterAnimator = GetComponent<CharacterAnimator>();
     }
@@ -44,6 +53,18 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb2d.linearVelocity = movement * speed;
+    }
+
+    public static void TeleportTo(Vector3 position)
+    {
+        //for MazeNode
+        if (instance == null)
+        {
+            Debug.LogError("Player instance not found!");
+            return;
+        }
+
+        instance.transform.position = position;
     }
 
 }
