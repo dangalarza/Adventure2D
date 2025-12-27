@@ -51,24 +51,24 @@ public class Enemy : MonoBehaviour
         StartCoroutine(KnockbackRoutine(knockbackDuration));
     }
 
-private IEnumerator KnockbackRoutine(float duration)
-{
-    //
-    IsStunned = true;
-    Rigidbody2D rb = GetComponent<Rigidbody2D>();
-    float timer = 0f;
+    private IEnumerator KnockbackRoutine(float duration)
+    {
+        //
+        IsStunned = true;
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        float timer = 0f;
 
-    while (timer < duration)
-    {
-        timer += Time.deltaTime;
-        yield return null;
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+        IsStunned = false;
     }
-    if (rb != null)
-    {
-        rb.linearVelocity = Vector2.zero;
-    }
-    IsStunned = false;
-}
 
 
     protected virtual  void Die()
@@ -82,5 +82,16 @@ private IEnumerator KnockbackRoutine(float duration)
         IsDead = true;
         Destroy(gameObject, 1.0f);
         //drops here?
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(!collision.gameObject.CompareTag("Player")) return;
+
+        PlayerHealth health = collision.gameObject.GetComponent<PlayerHealth>();
+        if (health != null)
+        {
+            health.TakeDamage(contactDamage);
+        }
     }
 }

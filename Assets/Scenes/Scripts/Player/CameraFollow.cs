@@ -7,6 +7,11 @@ public class CameraFollow : MonoBehaviour
 
     private Vector3 velocity = Vector3.zero;
 
+    void Start()
+    {
+        target = PlayerController.Transform;
+    }
+
     void LateUpdate()
     {
         if (!target) return;

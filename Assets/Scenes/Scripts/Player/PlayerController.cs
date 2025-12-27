@@ -67,4 +67,13 @@ public class PlayerController : MonoBehaviour
         instance.transform.position = position;
     }
 
+    public static Transform Transform
+{
+    get
+    {
+        if (instance == null) return null;
+        return instance.transform;
+    }
+}
+
 }
