@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Spear
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
   damage: 1
-  swingDuration: 0.15
-  hitboxSize: {x: 1.2, y: 2}
-  knockbackForce: 8
-  cooldown: 0.25
+  swingDuration: 0.4
+  hitboxSize: {x: 1, y: 0.5}
+  offsetRatio: {x: 1, y: 0}
+  knockbackForce: 10
+  cooldown: 0.7
   overrideController: {fileID: 22100000, guid: b6a4ebdff44a01b4c8baba9d1d47a1a8, type: 2}

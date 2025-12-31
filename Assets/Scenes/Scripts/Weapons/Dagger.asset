@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Dagger
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
   damage: 1
-  swingDuration: 0.15
-  hitboxSize: {x: 0.6, y: 0.4}
+  swingDuration: 0.3
+  hitboxSize: {x: 0.5, y: 0.8}
+  offsetRatio: {x: 0.6, y: 0}
   knockbackForce: 2
   cooldown: 0.25
   overrideController: {fileID: 22100000, guid: ce821639e842a6d4fb3b9464eb45bf7e, type: 2}

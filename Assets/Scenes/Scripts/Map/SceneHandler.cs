@@ -38,7 +38,6 @@ public class SceneHandler : MonoBehaviour
     public void SwitchScene(string sceneName, string spawnId)
     {
         targetSpawnId = spawnId;
-        print(targetSpawnId);
         SceneManager.LoadScene(sceneName);
     }
 

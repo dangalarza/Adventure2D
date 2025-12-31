@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private WeaponData sword;
     private static PlayerController instance;
     public float speed = 5f;
+    private bool canMove = true;
     public Vector2 FacingDirection { get; private set; } = Vector2.down;
     private Rigidbody2D rb2d;
     private Vector2 movement;
@@ -27,37 +28,45 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        movement = movement.normalized;
-        if (movement != Vector2.zero)
-            FacingDirection = movement;
+        if (canMove)
+        {
+            if (movement != Vector2.zero)
+                FacingDirection = movement;
 
-        if (Input.GetButtonDown("Fire1"))
-            GetComponent<PlayerCombat>().TryAttack();
+            if (Input.GetButtonDown("Fire1"))
+                GetComponent<PlayerCombat>().TryAttack();
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            GetComponent<PlayerCombat>().TryEquip(staff);
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+                GetComponent<PlayerCombat>().TryEquip(staff);
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-            GetComponent<PlayerCombat>().TryEquip(sword);
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+                GetComponent<PlayerCombat>().TryEquip(sword);
 
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
 
-        movement = movement.normalized;
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+            
+            movement = movement.normalized;
 
-        //movement = movement.normalized;
+            characterAnimator.UpdateAnimation(movement);
+        }
+        else if (!canMove)
+        {
+            characterAnimator.UpdateAnimation("Dead");
+        }
+        
 
-        characterAnimator.UpdateAnimation(movement);
     }
 
     void FixedUpdate()
     {
-        rb2d.linearVelocity = movement * speed;
+        if (canMove) rb2d.linearVelocity = movement * speed;
+        else         rb2d.linearVelocity = movement * 0f;
     }
 
     public static void TeleportTo(Vector3 position)
     {
-        //for MazeNode
+        //for MazeNode, teleports player
         if (instance == null)
         {
             Debug.LogError("Player instance not found!");
@@ -75,5 +84,8 @@ public class PlayerController : MonoBehaviour
         return instance.transform;
     }
 }
-
+    public void SetMovementEnabled(bool enabled)
+    {
+        canMove = enabled;
+    }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Enemy : MonoBehaviour
 {
@@ -73,6 +74,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual  void Die()
     {
+        contactDamage = 0;
         EnemyAnimator animator = GetComponent<EnemyAnimator>();
         
         if (animator != null)
@@ -91,7 +93,20 @@ public class Enemy : MonoBehaviour
         PlayerHealth health = collision.gameObject.GetComponent<PlayerHealth>();
         if (health != null)
         {
-            health.TakeDamage(contactDamage);
+            //Vector3 position =  transform.position;
+            health.TakeDamage(contactDamage, transform.position);
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if(!collision.gameObject.CompareTag("Player")) return;
+
+        PlayerHealth health = collision.gameObject.GetComponent<PlayerHealth>();
+        if (health != null)
+        {
+            //Vector3 position =  transform.position;
+            health.TakeDamage(contactDamage, transform.position);
         }
     }
 }

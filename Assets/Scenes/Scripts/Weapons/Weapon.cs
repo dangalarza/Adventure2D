@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour
     public void Attack(Vector2 facingDirection)
     {
         hitbox.size = weapon.hitboxSize;
+        hitbox.offset = hitbox.size * weapon.offsetRatio;
         hitbox.enabled = true;
 
         // play animation

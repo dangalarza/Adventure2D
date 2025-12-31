@@ -21,6 +21,17 @@ public class CharacterAnimator : MonoBehaviour
         animator.Play(animName);
     }
 
+    public void UpdateAnimation(string condition)
+    {
+        string animName;
+        if (condition == "Dead")
+        {
+            animName = "Dead";
+        }
+        else return;
+        animator.Play(animName);
+    }
+
     private string GetAnimationName(Vector2 facing, float speed)
     {
         if (speed == 0)

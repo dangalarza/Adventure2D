@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2293453474737961509}
   - component: {fileID: 8028669525784008646}
   - component: {fileID: 6868458230787589763}
+  - component: {fileID: 2765926288862881849}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -151,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3acf63a689ef574a9bff98afec1f563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  staff: {fileID: 11400000, guid: f4a18c76edebd084cb1c519ffe4792a2, type: 2}
-  sword: {fileID: 11400000, guid: 3e73a611dedc8104abe3fe1665c4c770, type: 2}
+  staff: {fileID: 11400000, guid: 3e73a611dedc8104abe3fe1665c4c770, type: 2}
+  sword: {fileID: 11400000, guid: 48e64d965b1c71f44ab3c0625b685fa3, type: 2}
   speed: 5
 --- !u!95 &2293453474737961509
 Animator:
@@ -225,6 +226,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.02}
   m_Size: {x: 0.95, y: 0.92}
   m_Direction: 0
+--- !u!114 &2765926288862881849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4350774163863510049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b4783898e20c04aac238cbbd271c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHealth: 8
+  invincibilityDuration: 0.5
+  heartBar: {fileID: 0}
 --- !u!1 &8928543803962639828
 GameObject:
   m_ObjectHideFlags: 0

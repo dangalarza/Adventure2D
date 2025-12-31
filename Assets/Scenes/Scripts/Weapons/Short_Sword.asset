@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
   damage: 2
   swingDuration: 0.5
-  hitboxSize: {x: 1.5, y: 0.8}
+  hitboxSize: {x: 1.2, y: 0.7}
+  offsetRatio: {x: 0.4, y: 0}
   knockbackForce: 8
   cooldown: 0.5
   overrideController: {fileID: 22100000, guid: cdb58414d4850dd4784f278b174dc6d1, type: 2}
