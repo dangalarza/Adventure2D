@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public int maxHealth = 3;
     public float moveSpeed = 2f;
     public int contactDamage = 1;
+    protected EnemyAnimator animator;
     public bool IsDead {get; private set;}
     public bool IsStunned {get; private set;}
 
@@ -15,12 +16,12 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Awake()
     {
+        animator = GetComponent<EnemyAnimator>();
         currentHealth = maxHealth;
     }
 
     public virtual void TakeDamage(int amount, Vector2 attackerPosition)
     {
-        EnemyAnimator animator = GetComponent<EnemyAnimator>();
         currentHealth -= amount;
         
         if (animator != null && currentHealth > 0)
@@ -54,7 +55,6 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator KnockbackRoutine(float duration)
     {
-        //
         IsStunned = true;
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         float timer = 0f;
@@ -64,30 +64,31 @@ public class Enemy : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
-        if (rb != null)
-        {
-            rb.linearVelocity = Vector2.zero;
-        }
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+        
         IsStunned = false;
     }
 
 
-    protected virtual  void Die()
+    protected virtual void Die()
     {
         contactDamage = 0;
-        EnemyAnimator animator = GetComponent<EnemyAnimator>();
-        
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (animator != null)
         {
             animator.PlayDeath();
         }
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+        
         IsDead = true;
-        Destroy(gameObject, 1.0f);
+        Destroy(gameObject, 1.5f);
         //drops here?
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if(IsDead) return;
         if(!collision.gameObject.CompareTag("Player")) return;
 
         PlayerHealth health = collision.gameObject.GetComponent<PlayerHealth>();
@@ -100,6 +101,7 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
+        if(IsDead) return;
         if(!collision.gameObject.CompareTag("Player")) return;
 
         PlayerHealth health = collision.gameObject.GetComponent<PlayerHealth>();

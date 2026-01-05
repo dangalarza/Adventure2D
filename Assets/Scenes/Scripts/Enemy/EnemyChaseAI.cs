@@ -39,7 +39,7 @@ public class EnemyChaseAI : MonoBehaviour
         return;
     }
         
-        if (player == null) return;
+    if (player == null) return;
 
         float distance = Vector2.Distance(transform.position, player.position);
         if (distance > detectionRange)

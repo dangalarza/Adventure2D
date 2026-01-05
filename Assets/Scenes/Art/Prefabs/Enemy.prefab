@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 6699204818433443127}
   - component: {fileID: 138929831733614789}
   - component: {fileID: 4657041570248806597}
-  - component: {fileID: 4573171680427713970}
   - component: {fileID: -5844142961450623385}
+  - component: {fileID: 4488855845837340533}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -174,18 +174,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4573171680427713970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2309515861050057177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac331385a290704ab7d1a105d28da8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyAnimator
 --- !u!70 &-5844142961450623385
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -223,3 +211,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.8, y: 0.8}
   m_Direction: 0
+--- !u!114 &4488855845837340533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309515861050057177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2216e6efb00f70343a96681284acce61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MeanieAnimator
