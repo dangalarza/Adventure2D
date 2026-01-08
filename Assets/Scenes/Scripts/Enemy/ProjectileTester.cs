@@ -1,18 +1,36 @@
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class ProjectileTester : MonoBehaviour
 {
     [SerializeField] public Rigidbody2D projectile;
-    
-    private List<Rigidbody2D> projectiles;
     public float speed = 4f;
+    Rigidbody2D prj;
 
     void Start()
     {
-        Rigidbody2D p = Instantiate(projectile, new Vector2(-7, -11), Quaternion.identity);
-        p.linearVelocity = Vector2.down * speed;
+        //Fire();
+        //StartCoroutine(coroutine);
     }
 
+    public void Fire()
+    {
+        Vector2 t = transform.position;
+        prj = Instantiate(projectile, t, Quaternion.identity);
+        prj.linearVelocity = Vector2.right * speed;
+    }
 
+    IEnumerator WaitAndPrint(float waitTime)
+    {
+        float time = 0f;
+        
+        while (time < 2f)
+        {
+            time += Time.deltaTime;
+            yield return new WaitForSeconds(waitTime);
+            print("Wait and print " + Time.time);
+            Fire();
+        }
+
+    }
 }

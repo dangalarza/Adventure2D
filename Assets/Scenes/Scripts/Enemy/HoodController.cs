@@ -4,25 +4,15 @@ using System.Collections;
 public class HoodController : Enemy
 {
     public float detectionRange = 4f;
-    //public int maxHealth = 3;
-    //override protected int currentHealth;
     private Transform player;
-    //private Rigidbody2D rb;
-    //private Enemy enemy;
-    //new private HoodAnimator animator;
     private HoodLogic logic;
     private bool active;
-    //public bool IsDead {get; private set;}
-    //public bool IsStunned {get; private set;}
 
 
     new void Awake()
     {
         currentHealth = maxHealth;
         logic =  GetComponent<HoodLogic>();
-        //rb = GetComponent<Rigidbody2D>();
-        //enemy = GetComponent<Enemy>();
-        //Hanimator  = GetComponent<HoodAnimator>(); 
         animator = GetComponent<HoodAnimator>();
         contactDamage = 0;
     }
