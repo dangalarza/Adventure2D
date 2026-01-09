@@ -42,7 +42,6 @@ public class TrackingProjectile : MonoBehaviour
         {
             other.GetComponent<PlayerHealth>().TakeDamage(1,transform.position);
         }
-        
         Destroy(gameObject,.8f);
     }
 

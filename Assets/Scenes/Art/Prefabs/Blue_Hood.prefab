@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7719072649989946279}
   - component: {fileID: 2355647201461815228}
   - component: {fileID: 3851332728541881340}
+  - component: {fileID: 7077585887994553730}
   m_Layer: 6
   m_Name: Blue_Hood
   m_TagString: Untagged
@@ -146,7 +147,7 @@ MonoBehaviour:
   maxHealth: 3
   moveSpeed: 2
   contactDamage: 1
-  detectionRange: 4
+  detectionRange: 8
 --- !u!50 &7719072649989946279
 Rigidbody2D:
   serializedVersion: 5
@@ -186,7 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb1e46aa4a45e64984656690e6a3839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoodLogic
-  minAttackRange: 2
+  chargeTime: 1.5
+  minAttackRange: 3
 --- !u!61 &3851332728541881340
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -233,3 +235,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7077585887994553730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6782040086121455952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a09785da02b4d7245b8e917d8240af52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileTester
+  projectile: {fileID: 825354365866703406, guid: a3ea55b1f8222a6428ad748fbdb9b5fe, type: 3}
+  speed: 4
