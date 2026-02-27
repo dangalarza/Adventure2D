@@ -7,7 +7,7 @@ public class ProjectileTester : MonoBehaviour
 
     public virtual void Fire()
     {
-        //Vector2 t = transform.position;
-        prj = Instantiate(projectile);//, t, Quaternion.identity);
+        Vector2 t = transform.position;
+        prj = Instantiate(projectile, t, Quaternion.identity);
     }
 }

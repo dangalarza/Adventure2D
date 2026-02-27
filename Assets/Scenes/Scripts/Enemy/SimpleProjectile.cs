@@ -9,11 +9,12 @@ public class SimpleProjectile : MonoBehaviour
     private Vector2 dir = Vector2.left;
     public int damage = 1;
     public float speed = 1f;
+    public float lifetime = 2.5f;
 
 
     void Start()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, lifetime);
         rb = GetComponent<Rigidbody2D>();
     }
 

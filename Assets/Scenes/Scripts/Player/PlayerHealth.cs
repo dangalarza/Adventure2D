@@ -44,7 +44,8 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("You died!");
-        GetComponent<PlayerController>().SetMovementEnabled(false);
+        GetComponent<PlayerController>().SetDeath(true);
+
     }
 
     IEnumerator InvincibilityCoroutine()

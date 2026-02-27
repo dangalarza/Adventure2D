@@ -40,6 +40,9 @@ public class Weapon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.TryGetComponent(out Vase vase))
+        vase.Break();
+
         if (!other.TryGetComponent(out Enemy enemy)) return;
         enemy.TakeDamage(weapon.damage, transform.position);
     }

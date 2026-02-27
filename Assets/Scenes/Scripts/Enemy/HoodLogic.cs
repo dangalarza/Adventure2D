@@ -57,7 +57,7 @@ public class HoodLogic : MonoBehaviour
         {
             if (minAttackRange <= targetDistance)
             {
-                print("Break to teleport...");
+                //print("Break to teleport...");
                 //isAttacking = false;
                 //yield break;
                 //teleport and break

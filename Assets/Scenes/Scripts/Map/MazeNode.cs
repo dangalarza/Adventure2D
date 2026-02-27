@@ -11,7 +11,7 @@ public class MazeNode : MonoBehaviour
         //playerTransform = PlayerController.instance.transform;
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         //playerTransform.position = targetNode.transform.position;
         if (collision.CompareTag("Player"))
