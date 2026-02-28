@@ -9,7 +9,7 @@ public class SimpleProjectile : MonoBehaviour
     private Vector2 dir = Vector2.left;
     public int damage = 1;
     public float speed = 1f;
-    public float lifetime = 2.5f;
+    public float lifetime = 3.0f;
 
 
     void Start()
@@ -29,7 +29,12 @@ public class SimpleProjectile : MonoBehaviour
         {
             collision.GetComponent<PlayerHealth>().TakeDamage(damage, transform.position);        
             Destroy(gameObject, .1f);
+        }
 
+        if (collision.CompareTag("Wall"))
+        {
+            speed = 0;
+            Destroy(gameObject, .5f);
         }
     }
 

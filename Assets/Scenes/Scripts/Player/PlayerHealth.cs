@@ -83,6 +83,21 @@ public class PlayerHealth : MonoBehaviour
         rb.linearVelocity = knockDirection * knockbackForce;
     }
 
+    public void FullHeal()
+    {
+        StartCoroutine(FullHealCoroutine());
+    }
+
+    private IEnumerator FullHealCoroutine()
+    {
+        while (currentHealth < maxHealth)
+        {
+            currentHealth += 1;
+            heartBar.UpdateHearts();
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
+
     public int getMaxHealth()
     {
         return maxHealth;
