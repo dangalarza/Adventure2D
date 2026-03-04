@@ -8,6 +8,7 @@ public class DarknessController : MonoBehaviour
     [SerializeField] float fadeSpeed = 3f;
     [SerializeField] float startX = 0;
     [SerializeField] float endX = 0;
+    private float t = 0;
     private bool playerInDarkness = false;
     private Transform playerpos;
 
@@ -19,20 +20,25 @@ public class DarknessController : MonoBehaviour
 
     void Update()
     {
+        
         if (playerInDarkness)
         {
+            // get player's x position
             float playerX = playerpos.position.x;
-            float t = Mathf.InverseLerp(startX, endX, playerX);
+            // calculates percentage of player's x between start and end
+            t = Mathf.InverseLerp(startX, endX, playerX);
+            // sets intensity based on percent t. From original level to 0.
             targetIntensity = Mathf.Lerp(originalLightLevel, 0, t);
         }
         else if (!playerInDarkness && globalLight.intensity < originalLightLevel)
         {
             targetIntensity = originalLightLevel;
+            t =  fadeSpeed * Time.deltaTime;
         }
         globalLight.intensity = Mathf.Lerp(
             globalLight.intensity,
             targetIntensity,
-            fadeSpeed * Time.deltaTime
+            t
         );
     }
 
