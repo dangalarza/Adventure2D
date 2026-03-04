@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
-public class LevelManager : MonoBehaviour
+public class FairySpawner : MonoBehaviour
 {
     [SerializeField] private Transform playerTransform;
     [SerializeField] private GameObject fairyPrefab;
@@ -22,8 +23,9 @@ public class LevelManager : MonoBehaviour
         {
             activeFairy = Instantiate(fairyPrefab, vase.transform.position, Quaternion.identity);
             
-            var fairyController = activeFairy.GetComponent<FairyController>();
-            fairyController.Initialize(playerTransform); // optional if you need the player reference
+            FairyController fairyController = activeFairy.GetComponent<FairyController>();
+            fairyController.Initialize(playerTransform);
+            DarknessManager.Instance.SetActiveFairy(fairyController);
         }
     }
 }

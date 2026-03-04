@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: f996dcfd09701db45b84f1bb07ccb97d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerTransform: {fileID: 6776926983716648440, guid: 524dab7c1bccf1c4783cffedc1f68b69, type: 3}
+  - fairyPrefab: {fileID: 1683887128978666814, guid: 5a5026ebca067b54e8f907d7c2de3ae2, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

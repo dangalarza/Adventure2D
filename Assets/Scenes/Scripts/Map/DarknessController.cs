@@ -3,9 +3,9 @@ using UnityEngine.Rendering.Universal;
 
 public class DarknessController : MonoBehaviour
 {
-    [SerializeField] Light2D globalLight;
-    private float originalLightLevel, targetIntensity;
-    [SerializeField] float fadeSpeed = 3f;
+    //[SerializeField] Light2D globalLight;
+    //private float originalLightLevel, targetIntensity;
+    //[SerializeField] float fadeSpeed = 3f;
     [SerializeField] float startX = 0;
     [SerializeField] float endX = 0;
     private float t = 0;
@@ -14,7 +14,7 @@ public class DarknessController : MonoBehaviour
 
     void Start()
     {
-        targetIntensity = originalLightLevel = globalLight.intensity;
+        //targetIntensity = originalLightLevel = globalLight.intensity;
     }
 
 
@@ -28,18 +28,16 @@ public class DarknessController : MonoBehaviour
             // calculates percentage of player's x between start and end
             t = Mathf.InverseLerp(startX, endX, playerX);
             // sets intensity based on percent t. From original level to 0.
-            targetIntensity = Mathf.Lerp(originalLightLevel, 0, t);
+            //targetIntensity = Mathf.Lerp(originalLightLevel, 0, t);
         }
-        else if (!playerInDarkness && globalLight.intensity < originalLightLevel)
+        else if (!playerInDarkness)// && globalLight.intensity < originalLightLevel)
         {
-            targetIntensity = originalLightLevel;
-            t =  fadeSpeed * Time.deltaTime;
+            //targetIntensity = originalLightLevel;
+            //t =  fadeSpeed * Time.deltaTime;
+            t = 0f;
         }
-        globalLight.intensity = Mathf.Lerp(
-            globalLight.intensity,
-            targetIntensity,
-            t
-        );
+        //globalLight.intensity = Mathf.Lerp(globalLight.intensity, targetIntensity,t);     );
+        DarknessManager.Instance.UpdateGlobalLight(t);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
