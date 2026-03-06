@@ -20,7 +20,6 @@ public class SimpleTurret : ProjectileTester
     {
         if (fireRoutine == null)
         {
-            print("*");
             fireRoutine = StartCoroutine(FireRoutine());
         }
     }

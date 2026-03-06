@@ -38,6 +38,6 @@ public class FairyController : MonoBehaviour
     public void AdjustLight(float darknessFraction)
     {
         float scale = Mathf.Lerp(1f, glowScaleMultiplier, darknessFraction);
-        glow.localScale = Vector3.one * scale;
+        glow.localScale = Vector3.one * 2.5f * scale;
     }   
 }

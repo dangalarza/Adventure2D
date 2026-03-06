@@ -21,6 +21,8 @@ public class DarknessManager : MonoBehaviour
 /// TODO: Work on global light hand off from controller to manager. 
 /// Rename files for clarity. Controller should calculate darkness ratio based on player movement.
 /// how to define exit from darkness? 
+/// 
+/// Kind of working currently. 
 /// </summary>
 
 
@@ -31,6 +33,8 @@ public class DarknessManager : MonoBehaviour
 
     public void UpdateGlobalLight(float darknessFraction)
     {
+
+        print("Darkness Fraction: " + darknessFraction);
         targetIntensity = Mathf.Lerp(originalLightLevel, 0f, darknessFraction);
         
         if (activeFairy != null)
