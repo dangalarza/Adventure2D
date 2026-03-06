@@ -47,7 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FairyController
   glow: {fileID: 3395458902447234682}
-  y_offset: 0.8
+  bobAmplitude: 0.01
+  bobFrequency: 0.8
+  swayAmplitude: 0.015
+  swayFrequency: 1.2
+  y_offset: 1.2
   glowScaleMultiplier: 3
 --- !u!1 &2376345333432128009
 GameObject:
