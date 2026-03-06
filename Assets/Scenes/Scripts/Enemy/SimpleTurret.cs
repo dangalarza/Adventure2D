@@ -3,20 +3,14 @@ using System.Collections;
 
 public class SimpleTurret : ProjectileTester
 {
-    private bool isFiring {set;get;}
+    private Coroutine fireRoutine;
     public enum Direction { Up, Down, Left, Right }
-    public float Xoffset, Yoffset = 0;
+    public float fireRate = 3f;
     [SerializeField] private Direction startingDirection;
 
-    void Start()
-    {
-        isFiring = false;
-    }
     public override void Fire()
     {
         Vector2 t = transform.position;
-        t.x += Xoffset;
-        t.y += Yoffset;
         prj = Instantiate(projectile, t ,Quaternion.identity);
         prj.GetComponent<SimpleProjectile>().ChangeDirection(GetDirectionVector());
     }
@@ -24,27 +18,25 @@ public class SimpleTurret : ProjectileTester
 
     void Update()
     {
-        if (!isFiring)
+        if (fireRoutine == null)
         {
-            StartCoroutine(FireRoutine());
+            print("*");
+            fireRoutine = StartCoroutine(FireRoutine());
         }
     }
     IEnumerator FireRoutine()
     {
-        isFiring = true;
         float time = 0f;
-        while (isFiring)
+        while (true)
         {
-            if (time > 3f)
+            if (time > fireRate)
             {
                 Fire();
-                isFiring = false;
                 time = 0f;
             }
-            yield return null;
             time += Time.deltaTime;
+            yield return null;
         }
-        
     }
 
     private Vector2 GetDirectionVector()
