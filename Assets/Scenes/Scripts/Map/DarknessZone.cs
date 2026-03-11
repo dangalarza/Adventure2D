@@ -12,15 +12,9 @@ public class DarknessZone : MonoBehaviour
     private bool playerInDarkness = false;
     private Transform playerpos;
 
-    void Start()
-    {
-        //targetIntensity = originalLightLevel = globalLight.intensity;
-    }
-
 
     void Update()
     {
-        
         if (playerInDarkness)
         {
             // get player's x position
@@ -33,7 +27,6 @@ public class DarknessZone : MonoBehaviour
         {
             t = 0f;
         }
-        //globalLight.intensity = Mathf.Lerp(globalLight.intensity, targetIntensity,t);     );
         
     }
 

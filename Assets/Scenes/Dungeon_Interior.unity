@@ -6330,6 +6330,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2883562293317841309, guid: eb079037957061b4b8f7a9612fcc9aca, type: 3}
+      propertyPath: fireRate
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8643921055951885646, guid: eb079037957061b4b8f7a9612fcc9aca, type: 3}
       propertyPath: m_Name
       value: Eye_Turret (1)
