@@ -52,7 +52,7 @@ MonoBehaviour:
   swayAmplitude: 0.015
   swayFrequency: 1.2
   y_offset: 1.2
-  glowScaleMultiplier: 3
+  glowScaleMultiplier: 2.2
 --- !u!1 &2376345333432128009
 GameObject:
   m_ObjectHideFlags: 0
